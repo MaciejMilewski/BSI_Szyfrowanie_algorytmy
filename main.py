@@ -6,7 +6,7 @@ while True:
     if operacja == "1":
         print(":::Wybrałeś szyfrowanie AES:::\n")
     elif operacja == "2":
-        print(":::Wybrałeś szyfrowanie RC5:::\n")
+        print(":::Wybrałeś szyfrowanie DES:::\n")
     elif operacja == "3":
         print(":::Wybrałeś szyfrowanie Twofish:::\n")
     elif operacja == "0":
