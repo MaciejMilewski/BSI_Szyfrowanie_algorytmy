@@ -1,10 +1,11 @@
 from utils.console_utility import menu
+import src.aes as aes
 
 print(menu())
 while True:
     operacja = input("Co wybierzesz? ")
     if operacja == "1":
-        print(":::Wybrałeś szyfrowanie AES:::\n")
+        print(":::Wybrałeś szyfrowanie AES:::\n"), aes.aes()
     elif operacja == "2":
         print(":::Wybrałeś szyfrowanie DES:::\n")
     elif operacja == "3":
