@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6e5ecfe-273c-4426-94aa-95ebe9ce08df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BSI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BSI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a6e5ecfe-273c-4426-94aa-95ebe9ce08df" name="Default Changelist" comment="Szyfrowanie AES">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/aes.py" afterDir="false" />
@@ -59,7 +56,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/minst" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/minst/__pycache__" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -173,6 +170,14 @@
       <option name="presentableId" value="Default" />
       <updated>1607885351723</updated>
     </task>
+    <task id="LOCAL-00001" summary="Szyfrowanie AES">
+      <created>1607980847131</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607980847131</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +192,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Szyfrowanie AES" />
+    <option name="LAST_COMMIT_MESSAGE" value="Szyfrowanie AES" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="787" y="451" key="#Inspections" timestamp="1607938266143">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -196,26 +205,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="614" y="426" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1607940416086" />
-    <state x="1317" y="496" key="FileChooserDialogImpl" timestamp="1607944018934">
+    <state x="1317" y="496" key="FileChooserDialogImpl" timestamp="1608023009297">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1317" y="496" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1607944018934" />
-    <state width="950" height="276" key="GridCell.Tab.0.bottom" timestamp="1607980794582">
+    <state x="1317" y="496" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1608023009297" />
+    <state width="1268" height="276" key="GridCell.Tab.0.bottom" timestamp="1608024207010">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="950" height="276" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1607980794582" />
-    <state width="950" height="276" key="GridCell.Tab.0.center" timestamp="1607980794582">
+    <state width="1268" height="276" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1608024207010" />
+    <state width="1268" height="276" key="GridCell.Tab.0.center" timestamp="1608024207009">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="950" height="276" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1607980794582" />
-    <state width="950" height="276" key="GridCell.Tab.0.left" timestamp="1607980794582">
+    <state width="1268" height="276" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1608024207009" />
+    <state width="1268" height="276" key="GridCell.Tab.0.left" timestamp="1608024207009">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="950" height="276" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1607980794582" />
-    <state width="950" height="276" key="GridCell.Tab.0.right" timestamp="1607980794582">
+    <state width="1268" height="276" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1608024207009" />
+    <state width="1268" height="276" key="GridCell.Tab.0.right" timestamp="1608024207010">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="950" height="276" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1607980794582" />
+    <state width="1268" height="276" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1608024207010" />
     <state width="951" height="341" key="GridCell.Tab.1.bottom" timestamp="1607941919796">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -236,5 +245,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="972" y="493" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1607940625047" />
+    <state x="903" y="458" key="Vcs.Push.Dialog.v2" timestamp="1607980862559">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="903" y="458" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1607980862559" />
   </component>
 </project>

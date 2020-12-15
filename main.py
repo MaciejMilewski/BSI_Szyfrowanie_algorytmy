@@ -5,7 +5,7 @@ print(menu())
 while True:
     operacja = input("Co wybierzesz? ")
     if operacja == "1":
-        print(":::Wybrałeś szyfrowanie AES:::\n"), aes.aes()
+        print(":::Wybrałeś szyfrowanie AES:::\n"), aes.main()
     elif operacja == "2":
         print(":::Wybrałeś szyfrowanie DES:::\n")
     elif operacja == "3":
