@@ -3,7 +3,6 @@ def pad(s):
     return s + pad * chr(pad)
 
 def unpad(s):
-    s = s
     offset = ord(s[-1])
     #ord() function returns an integer representing the Unicode character
     return s[:-offset]
