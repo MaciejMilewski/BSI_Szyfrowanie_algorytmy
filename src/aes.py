@@ -9,6 +9,7 @@ from Crypto.Cipher import AES
 import base64
 # functions for encoding binary data to printable ASCII characters and decoding such encodings back to binary data
 
+
 def aes_encode(text, key, iv):
     key = bytes(key, encoding='utf8')
     # print(key) = "tdqsgf8888!@#$%^"
@@ -33,6 +34,7 @@ def aes_decode(text, key, iv):
     decrypted_text = cipher.decrypt(textb).decode('utf-8')
     decrypted_code = decrypted_text.rstrip('\0')
     return decrypted_code
+
 
 def main():
     message = input("Podaj wiadomość: ")

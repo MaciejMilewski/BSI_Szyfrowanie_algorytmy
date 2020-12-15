@@ -23,7 +23,7 @@ def main():
     message = input("Podaj wiadomość: ")
     message = bytes(message, encoding='utf-8')
 
-    # Klucz zapisany w Python3 używając bytes
+    # Key written using bytes in Python3
     key = DesKey(b"some key")
 
     encrypted_message = encrypt_by_des(message, key)
