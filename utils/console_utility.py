@@ -3,7 +3,9 @@ def menu():
     print("::MENU::")
     print("1 - Szyfrowanie AES")
     print("2 - Szyfrowanie DES")
-    print("3 - Szyfrowanie Twofish")
+    print("3 - Szyfrowanie 3DES")
+    print("4 - Szyfrowanie RSA")
+    print("5 - Szyfrowanie DSA")
     print("4 - Koniec")
     print("0 - Menu")
     return "....::::::.... "
