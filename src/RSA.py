@@ -7,7 +7,7 @@ Autor: Michał Degowski
 
 import rsa
 
-def encrypt_by_RSA(message, pub):
+def encrypt_RSA(message, pub):
     """ Encrypting message using RSA Mode """
     return rsa.encrypt(message, pub)
 
@@ -22,7 +22,7 @@ def main():
 
     (pub, priv) = rsa.newkeys(512)
 
-    encrypted_message = encrypt_by_RSA(message, pub)
+    encrypted_message = encrypt_RSA(message, pub)
     decrypted_message = decrypt_RSA(encrypted_message, priv)
 
     print("Zaszyfrowany tekst: ", encrypted_message)

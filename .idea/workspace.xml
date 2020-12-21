@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6e5ecfe-273c-4426-94aa-95ebe9ce08df" name="Default Changelist" comment="Added des algorithm">
-      <change beforePath="$PROJECT_DIR$/.idea/BSI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BSI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/console_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/console_utility.py" afterDir="false" />
-    </list>
+    <list default="true" id="a6e5ecfe-273c-4426-94aa-95ebe9ce08df" name="Default Changelist" comment="Algorytm RSA" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608027509918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Algorytm RSA">
+      <created>1608585867581</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608585867581</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,7 +226,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added des algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added des algorithm" />
+    <MESSAGE value="Algorytm RSA" />
+    <option name="LAST_COMMIT_MESSAGE" value="Algorytm RSA" />
   </component>
   <component name="WindowStateProjectService">
     <state x="787" y="451" key="#Inspections" timestamp="1607938266143">
@@ -281,5 +282,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="972" y="493" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1607940625047" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1608585874407">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1608585874407" />
   </component>
 </project>
