@@ -6,43 +6,40 @@ Autor: Michał Degowski
 """
 
 from Crypto.Cipher import AES
+from utils.pad import pad, unpad
 import base64
 # functions for encoding binary data to printable ASCII characters and decoding such encodings back to binary data
 
-
-def aes_encode(text, key, iv):
+def aes_encode(message, key):
+    """ Encrypting message using AES in CBC Mode """
     key = bytes(key, encoding='utf8')
-    # print(key) = "tdqsgf8888!@#$%^"
+    iv = "mm88!@#$%^dsmdms"
     iv = bytes(iv, encoding='utf8')
-    # print(key) = "tdqsgf8888!@#$%^"
     cipher = AES.new(key, AES.MODE_CBC, iv)
-    PADDING = '\0'
-    pad_it = lambda s: s + (16 - len(s) % 16) * PADDING
-    AES_code = bytes(pad_it(text), encoding='utf8')
+    AES_code = bytes(pad(message), encoding='utf8')
     code = cipher.encrypt(AES_code)
-    base64_text = str((base64.encodebytes(code)).decode()).replace('\n', '')
-    return base64_text
+    encrypted_text = str((base64.encodebytes(code)).decode())
+    return encrypted_text
 
 
-def aes_decode(text, key, iv):
+def aes_decode(message, key):
+    """ Decrypting message and removing padding from message """
     key = bytes(key, encoding='utf8')
-    # print(key) = "tdqsgf8888!@#$%^"
+    iv = "mm88!@#$%^dsmdms"
     iv = bytes(iv, encoding='utf8')
-    # print(key) = "tdqsgf8888!@#$%^"
     cipher = AES.new(key, AES.MODE_CBC, iv)
-    textb = base64.b64decode(text.encode('utf-8'))
-    decrypted_text = cipher.decrypt(textb).decode('utf-8')
+    message = base64.b64decode(message.encode())
+    decrypted_text = cipher.decrypt(message).decode()
     decrypted_code = decrypted_text.rstrip('\0')
-    return decrypted_code
-
+    return unpad(decrypted_code)
 
 def main():
-    message = input("Podaj wiadomość: ")
-    secret_key = "tdqsgf8888!@#$%^"
-    iv = "tdqsgf8888!@#$%^"
-    encrypted_text = aes_encode(message, secret_key, iv)
+    """ Crypt&Decrypt message using AES """
+    message = input("Podaj wiadomość: \n")
+    secret_key = input("Podaj klucz (musi być 16 znaków!): \n")
+    encrypted_text = aes_encode(message, secret_key)
     print('Zaszyfrowany tekst: ', encrypted_text)
-    print('Odszyfrowany tekst: ', aes_decode(encrypted_text, secret_key, iv))
+    print('Odszyfrowany tekst: ', aes_decode(encrypted_text, secret_key))
 
 
 if __name__ == "__main__":

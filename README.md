@@ -1,2 +1,2 @@
 # BSI_Szyfrowanie_algorytmy
-Program szyfrujący tekst przy pomocy trzech różnych algorytmów: AES, DES oraz 3DES.
+Program szyfrujący tekst przy pomocy różnych algorytmów: AES, DES, 3DES, RSA i DSA.
