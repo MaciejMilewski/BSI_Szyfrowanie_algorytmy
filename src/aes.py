@@ -8,6 +8,8 @@ Autor: Michał Degowski
 from Crypto.Cipher import AES
 from utils.pad import pad, unpad
 import base64
+import timeit
+
 # functions for encoding binary data to printable ASCII characters and decoding such encodings back to binary data
 
 def aes_encode(message, key):
@@ -37,9 +39,17 @@ def main():
     """ Crypt&Decrypt message using AES """
     message = input("Podaj wiadomość: \n")
     secret_key = input("Podaj klucz (musi być 16 znaków!): \n")
+
+    starttime = timeit.default_timer()
     encrypted_text = aes_encode(message, secret_key)
+    print("Czas szyfrowania używając AES: ", timeit.default_timer() - starttime, "s")
+
+    starttime = timeit.default_timer()
+    decrypted_text = aes_decode(encrypted_text, secret_key)
+    print("Czas odszyfrowania AES: ", timeit.default_timer() - starttime, "s")
+
     print('Zaszyfrowany tekst: ', encrypted_text)
-    print('Odszyfrowany tekst: ', aes_decode(encrypted_text, secret_key))
+    print('Odszyfrowany tekst: ', decrypted_text)
 
 
 if __name__ == "__main__":

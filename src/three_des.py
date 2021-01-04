@@ -7,7 +7,8 @@ Autor: Maciej Milewski
 
 
 from pyDes import *
-from binascii import unhexlify as unhex
+import timeit
+from utils.pad import fill_to_block
 
 
 def encrypt_by_3des(message, key):
@@ -20,28 +21,24 @@ def decrypt_3des(message, key):
     return key.decrypt(message)
 
 
-def fill_to_eight(message):
-    if(len(message)%8 == 0):
-        return message
-    else:
-        for i in range(len(message)%8+2):
-            message += " "
-        return message
-
-
-
 def main():
     """ Crypt&Decrypt message using 3DES """
     message = input("Podaj wiadomość: ")
-    message = fill_to_eight(message)
+    message = fill_to_block(message, 8)
     message = bytes(message, encoding='utf-8')
 
-    key = triple_des(unhex("133457799BBCDFF1112233445566778877661100DD223311"))
+    key = input("Podaj klucz: \n")
+    key = fill_to_block(key, 16)
+    key = triple_des(key)
 
+    starttime = timeit.default_timer()
     encrypted_message = key.encrypt(message)
+    print("Czas szyfrowania używając 3DES: ", timeit.default_timer() - starttime, "s")
     print("Zaszyfrowany tekst: ", encrypted_message)
 
+    starttime = timeit.default_timer()
     decrypted_message = key.decrypt(encrypted_message)
+    print("Czas odszyfrowania 3DES: ", timeit.default_timer() - starttime, "s")
     print("Odszyfrowany tekst: ", decrypted_message.decode("ISO-8859-1").rstrip('\0'))
 
 

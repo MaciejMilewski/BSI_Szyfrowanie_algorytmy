@@ -6,6 +6,8 @@ Autor: Maciej Milewski
 """
 
 from des import DesKey
+import timeit
+from utils.pad import fill_to_block
 
 
 def encrypt_by_des(message, key):
@@ -23,11 +25,18 @@ def main():
     message = input("Podaj wiadomość: ")
     message = bytes(message, encoding='utf-8')
 
-    # Key written using bytes in Python3
-    key = DesKey(b"some key")
+    key = input("Podaj klucz: \n")
+    key = fill_to_block(key, 8)
+    key = key.encode('utf-8')
+    key = DesKey(key)
 
+    starttime = timeit.default_timer()
     encrypted_message = encrypt_by_des(message, key)
+    print("Czas szyfrowania używając DES: ", timeit.default_timer() - starttime, "s")
+
+    starttime = timeit.default_timer()
     decrypted_message = decrypt_des(encrypted_message, key)
+    print("Czas odszyfrowania DES: ", timeit.default_timer() - starttime, "s")
 
     print("Zaszyfrowany tekst: ", encrypted_message)
     print("Odszyfrowany tekst: ", decrypted_message.decode("ISO-8859-1").rstrip('\0'))
