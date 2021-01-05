@@ -9,6 +9,7 @@ from Crypto.Cipher import AES
 from utils.pad import pad, unpad
 import base64
 import timeit
+from utils.pad import fill_to_block
 
 # functions for encoding binary data to printable ASCII characters and decoding such encodings back to binary data
 
@@ -39,6 +40,7 @@ def main():
     """ Crypt&Decrypt message using AES """
     message = input("Podaj wiadomość: \n")
     secret_key = input("Podaj klucz (musi być 16 znaków!): \n")
+    secret_key = fill_to_block(secret_key, 16)
 
     starttime = timeit.default_timer()
     encrypted_text = aes_encode(message, secret_key)

@@ -10,6 +10,7 @@ from tinyec import registry
 from Crypto.Cipher import AES
 import hashlib, secrets, binascii
 import timeit
+import os
 
 
 def encrypt_AES_GCM(msg, secretKey):
